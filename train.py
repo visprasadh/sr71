@@ -266,7 +266,7 @@ def main(args):
 
     # Training
     Es, hiddens = [None], [None]
-    for task_id, dataloader in enumerate(dataloaders[: -args.eval_split]):
+    for task_id, dataloader in enumerate(dataloaders[: -int(args.eval_split)]):
         E, hidden, rnn_unit = train(
             dataloader, optimizer, rnn_unit, args, task_id, Es[-1], hiddens[-1]
         )
@@ -280,7 +280,7 @@ def main(args):
 
     # Testing
     test_accuracies = []
-    for task_id, dataloader in enumerate(dataloaders[-args.eval_split :]):
+    for task_id, dataloader in enumerate(dataloaders[-int(args.eval_split) :]):
         log(f'Testing {task_id}')
         acc = evaluation(dataloader, rnn_unit, args, Es[-1], hiddens[-1])
         test_accuracies.append(acc)
