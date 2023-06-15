@@ -281,6 +281,7 @@ def main(args):
     # Testing
     test_accuracies = []
     for task_id, dataloader in enumerate(dataloaders[-args.eval_split :]):
+        log(f'Testing {task_id}')
         acc = evaluation(dataloader, rnn_unit, args, Es[-1], hiddens[-1])
         test_accuracies.append(acc)
     line_plot(args, test_accuracies)
