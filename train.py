@@ -221,7 +221,6 @@ def evaluation(dataloader, rnn_unit, args, input_E, input_hidden):
     E = input_E
     hidden = input_hidden
     test_accs = []
-    log("Start Testing...")
     with tqdm(dataloader, unit="batch") as tepoch:
         for X, Y in tepoch:
             X, Y = X.float().to(device), Y.float().to(device)
@@ -247,7 +246,7 @@ def main(args):
 
     log("use {} data".format(args.dataset))
     log("-" * 40)
-    
+
     # Defining dataloaders for each domain
     dataloaders = dataset_preparation(
         args=args,
@@ -279,20 +278,21 @@ def main(args):
     print("Training time:", ending_time - starting_time)
 
     # Testing
-    test_accuracies = []
-    for task_id, dataloader in enumerate(dataloaders[-int(args.eval_split) :]):
-        log(f'Testing {task_id}')
-        acc = evaluation(dataloader, rnn_unit, args, Es[-1], hiddens[-1])
-        test_accuracies.append(acc)
     if args.experiment == 'classic':
+        test_accuracies = []
+        for task_id, dataloader in enumerate(dataloaders[-int(args.eval_split) :]):
+            log(f'Testing domain {task_id}')
+            acc = evaluation(dataloader, rnn_unit, args, Es[-1], hiddens[-1])
+            test_accuracies.append(acc)
         line_plot(args, test_accuracies, args.name)
     elif args.experiment == 'continual':
-        for i in range(5):
-            t_acc = []
-            for j in range(5):
-                t_acc.append(test_accuracies[j*5 + i])
-            log(f'Task{i} accuracies : {t_acc}')
-            line_plot(args, t_acc, f'Expt:{args.name} Task{i}')
+        test_accuracies = {}
+        for task_id, dataloader in enumerate(dataloaders[-int(args.eval_split) :]):
+            log(f'Testing task {task_id % 5}')
+            acc = evaluation(dataloader, rnn_unit, args, Es[-1], hiddens[-1])
+            test_accuracies[f'{task_id % 5}'].append(acc)
+        for key, value in test_accuracies.items():
+            line_plot(args, value, f'{args.name} Task:{key}')
     else:
         pass
 
