@@ -17,7 +17,8 @@ def line_plot(args, data, title):
     plt.title(title)
     plt.xlabel('Test task')
     plt.ylabel('Accuracy')
-    plt.savefig(f'output/{args.name}/test_accuracy_plot.jpg')
+    plt.savefig(f'output/{args.name}/{title}.jpg')
+    plt.show()
 
 def rotate_digits(dataset, n_domains: int, step_size: int):
     # Parameters
