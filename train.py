@@ -284,8 +284,17 @@ def main(args):
         log(f'Testing {task_id}')
         acc = evaluation(dataloader, rnn_unit, args, Es[-1], hiddens[-1])
         test_accuracies.append(acc)
-    line_plot(args, test_accuracies)
-
+    if args.experiment == 'classic':
+        line_plot(args, test_accuracies, args.name)
+    elif args.experiment == 'coninual':
+        for i in range(5):
+            t_acc = []
+            for j in range(5):
+                t_acc.append(test_accuracies[j*5 + i])
+            log(f'Task{i} accuracies : {t_acc}')
+            line_plot(args, t_acc, f'Expt:{args.name} Task{i}')
+    else:
+        pass
 
 if __name__ == "__main__":
     print("Start Training...")

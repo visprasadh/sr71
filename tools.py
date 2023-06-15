@@ -8,14 +8,13 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def line_plot(args, data):
+def line_plot(args, data, title):
     sns.set_style('dark')
     plt.rcParams['figure.figsize'] = (10, 8)
     sns.lineplot(data = data)
     plt.grid()
-    sns.despine(offset=10, trim=True);
-    plt.title(args.name)
-    plt.xticks(list(range(args.n_domains)))
+    sns.despine(offset=10, trim=True)
+    plt.title(title)
     plt.xlabel('Test task')
     plt.ylabel('Accuracy')
     plt.savefig(f'output/{args.name}/test_accuracy_plot.jpg')
