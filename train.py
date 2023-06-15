@@ -247,7 +247,7 @@ def main(args):
 
     log("use {} data".format(args.dataset))
     log("-" * 40)
-
+    
     # Defining dataloaders for each domain
     dataloaders = dataset_preparation(
         args=args,
@@ -286,7 +286,7 @@ def main(args):
         test_accuracies.append(acc)
     if args.experiment == 'classic':
         line_plot(args, test_accuracies, args.name)
-    elif args.experiment == 'coninual':
+    elif args.experiment == 'continual':
         for i in range(5):
             t_acc = []
             for j in range(5):

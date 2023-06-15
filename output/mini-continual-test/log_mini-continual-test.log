@@ -1,21 +1,36 @@
-2023-06-16 00:31:32,543 - INFO - Is GPU available? True
-2023-06-16 00:31:32,543 - INFO - Experiment mini-continual-test setup:
-2023-06-16 00:31:32,543 - INFO - name: mini-continual-test
-2023-06-16 00:31:32,543 - INFO - dataset: MNIST
-2023-06-16 00:31:32,543 - INFO - experiment: classic
-2023-06-16 00:31:32,543 - INFO - n_domains: 5.0
-2023-06-16 00:31:32,543 - INFO - eval_split: 10.0
-2023-06-16 00:31:32,543 - INFO - step_size: 15
-2023-06-16 00:31:32,543 - INFO - train: 0
-2023-06-16 00:31:32,543 - INFO - noise_dim: 16
-2023-06-16 00:31:32,543 - INFO - num_rnn_layer: 1
-2023-06-16 00:31:32,543 - INFO - latent_dim: 32
-2023-06-16 00:31:32,544 - INFO - hidden_dim: 16
-2023-06-16 00:31:32,544 - INFO - noise_type: Gaussian
-2023-06-16 00:31:32,544 - INFO - num_workers: 0
-2023-06-16 00:31:32,544 - INFO - epoches: 10
-2023-06-16 00:31:32,544 - INFO - batch_size: 16
-2023-06-16 00:31:32,544 - INFO - learning_rate: 0.001
-2023-06-16 00:31:32,544 - INFO - is_test: True
-2023-06-16 00:31:32,544 - INFO - use MNIST data
-2023-06-16 00:31:32,544 - INFO - ----------------------------------------
+2023-06-16 00:41:15,089 - INFO - Is GPU available? True
+2023-06-16 00:41:15,090 - INFO - Experiment mini-continual-test setup:
+2023-06-16 00:41:15,090 - INFO - name: mini-continual-test
+2023-06-16 00:41:15,090 - INFO - dataset: MNIST
+2023-06-16 00:41:15,090 - INFO - experiment: continual
+2023-06-16 00:41:15,090 - INFO - n_domains: 5
+2023-06-16 00:41:15,090 - INFO - eval_split: 10
+2023-06-16 00:41:15,090 - INFO - step_size: 15
+2023-06-16 00:41:15,090 - INFO - train: 0
+2023-06-16 00:41:15,090 - INFO - noise_dim: 16
+2023-06-16 00:41:15,090 - INFO - num_rnn_layer: 1
+2023-06-16 00:41:15,090 - INFO - latent_dim: 32
+2023-06-16 00:41:15,090 - INFO - hidden_dim: 16
+2023-06-16 00:41:15,090 - INFO - noise_type: Gaussian
+2023-06-16 00:41:15,090 - INFO - num_workers: 0
+2023-06-16 00:41:15,090 - INFO - epoches: 10
+2023-06-16 00:41:15,090 - INFO - batch_size: 16
+2023-06-16 00:41:15,090 - INFO - learning_rate: 0.001
+2023-06-16 00:41:15,090 - INFO - is_test: True
+2023-06-16 00:41:15,090 - INFO - use MNIST data
+2023-06-16 00:41:15,090 - INFO - ----------------------------------------
+2023-06-16 00:41:20,546 - INFO - Start Training on Domain 0...
+2023-06-16 00:41:35,190 - INFO - Start Training on Domain 1...
+2023-06-16 00:41:49,233 - INFO - Start Training on Domain 2...
+2023-06-16 00:42:02,146 - INFO - Start Training on Domain 3...
+2023-06-16 00:42:15,814 - INFO - Start Training on Domain 4...
+2023-06-16 00:42:29,409 - INFO - Start Training on Domain 5...
+2023-06-16 00:42:43,994 - INFO - Start Training on Domain 6...
+2023-06-16 00:42:58,012 - INFO - Start Training on Domain 7...
+2023-06-16 00:43:10,374 - INFO - Start Training on Domain 8...
+2023-06-16 00:43:23,933 - INFO - Start Training on Domain 9...
+2023-06-16 00:43:37,414 - INFO - Start Training on Domain 10...
+2023-06-16 00:43:51,934 - INFO - Start Training on Domain 11...
+2023-06-16 00:44:05,887 - INFO - Start Training on Domain 12...
+2023-06-16 00:44:18,800 - INFO - Start Training on Domain 13...
+2023-06-16 00:44:32,458 - INFO - Start Training on Domain 14...
