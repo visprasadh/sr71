@@ -237,7 +237,7 @@ def evaluation(dataloader, rnn_unit, args, input_E, input_hidden):
                 test_accs.append(accuracy.item())
                 tepoch.set_postfix(loss=loss.item(), accuracy=accuracy.item())
     log("Average Testing Accuracy is {}".format(np.mean(test_accs)))
-    return test_accs
+    return np.mean(test_accs)
 
 
 def main(args):
