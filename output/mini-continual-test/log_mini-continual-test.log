@@ -1,0 +1,21 @@
+2023-06-16 00:31:32,543 - INFO - Is GPU available? True
+2023-06-16 00:31:32,543 - INFO - Experiment mini-continual-test setup:
+2023-06-16 00:31:32,543 - INFO - name: mini-continual-test
+2023-06-16 00:31:32,543 - INFO - dataset: MNIST
+2023-06-16 00:31:32,543 - INFO - experiment: classic
+2023-06-16 00:31:32,543 - INFO - n_domains: 5.0
+2023-06-16 00:31:32,543 - INFO - eval_split: 10.0
+2023-06-16 00:31:32,543 - INFO - step_size: 15
+2023-06-16 00:31:32,543 - INFO - train: 0
+2023-06-16 00:31:32,543 - INFO - noise_dim: 16
+2023-06-16 00:31:32,543 - INFO - num_rnn_layer: 1
+2023-06-16 00:31:32,543 - INFO - latent_dim: 32
+2023-06-16 00:31:32,544 - INFO - hidden_dim: 16
+2023-06-16 00:31:32,544 - INFO - noise_type: Gaussian
+2023-06-16 00:31:32,544 - INFO - num_workers: 0
+2023-06-16 00:31:32,544 - INFO - epoches: 10
+2023-06-16 00:31:32,544 - INFO - batch_size: 16
+2023-06-16 00:31:32,544 - INFO - learning_rate: 0.001
+2023-06-16 00:31:32,544 - INFO - is_test: True
+2023-06-16 00:31:32,544 - INFO - use MNIST data
+2023-06-16 00:31:32,544 - INFO - ----------------------------------------

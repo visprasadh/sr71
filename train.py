@@ -45,14 +45,14 @@ parser.add_argument(
 parser.add_argument(
     "--n_domains",
     default=15,  # Includes the number of test domains
-    type=float,
+    type=int,
     help="the number of domains",
 )
 
 parser.add_argument(
     "--eval_split",
     default=5,
-    type=float,
+    type=int,
     help="the number of test domains",
 )
 
