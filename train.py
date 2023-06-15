@@ -292,6 +292,7 @@ def main(args):
             acc = evaluation(dataloader, rnn_unit, args, Es[-1], hiddens[-1])
             test_accuracies[f'{task_id % 5}'].append(acc)
         for key, value in test_accuracies.items():
+            log(f'Test accuracies for task {key} : {value}')
             line_plot(args, value, f'{args.name} Task:{key}')
     else:
         pass
