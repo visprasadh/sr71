@@ -278,7 +278,7 @@ def main(args):
     print("Training time:", ending_time - starting_time)
 
     # Testing
-    if args.experiment == 'classic':
+    if args.experiment == 'classic' or args.experiment == 'continual-nested':
         test_accuracies = []
         for task_id, dataloader in enumerate(dataloaders[-int(args.eval_split) :]):
             log(f'Testing domain {task_id}')
