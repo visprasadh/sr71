@@ -47,19 +47,28 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 sns.set_style('dark')
-a = list(range(5))
-b = [21, 25, 56, 32 ,32]
+# a = list(range(5))
+# b = [21, 25, 56, 32 ,32]
 
-data = [a, b]
+# data = [a, b]
 
-plt.rcParams['figure.figsize'] = (10, 8)
-sns.lineplot(data = b)
+# plt.rcParams['figure.figsize'] = (10, 8)
+# sns.lineplot(data = b)
+# plt.grid()
+
+# plt.title(args.name)
+# plt.xticks(a)
+# plt.xlabel('Test task')
+# plt.ylabel('Accuracy')
+# plt.savefig('fig.jpg')
+
+angles = [15, 30, 45, 60]
+acc = [0.964, 0.697, 0.721, 0.621]
+plt.plot(angles, acc)
 plt.grid()
-sns.despine(offset=10, trim=True);
-
-plt.title(args.name)
-plt.xticks(a)
-plt.xlabel('Test task')
+sns.despine(offset=10, trim=True)
+plt.title('Impact of increment angles on accuracy')
+plt.xticks(angles)
+plt.xlabel('Increment angle (in degrees)')
 plt.ylabel('Accuracy')
-plt.savefig('fig.jpg')
-
+plt.savefig('angles.jpg')
