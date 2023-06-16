@@ -286,7 +286,7 @@ def main(args):
             test_accuracies.append(acc)
         line_plot(args, test_accuracies, args.name)
     elif args.experiment == 'continual':
-        test_accuracies = {}
+        test_accuracies = {'0': [], '1': [], '2': [], '3': [], '4': []}
         for task_id, dataloader in enumerate(dataloaders[-int(args.eval_split) :]):
             log(f'Testing task {task_id % 5}')
             acc = evaluation(dataloader, rnn_unit, args, Es[-1], hiddens[-1])
