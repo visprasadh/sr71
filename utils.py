@@ -107,18 +107,20 @@ def dataset_preparation(args, n_domains, step_size, output_type, train):
         xs = [x1, x2, x3, x4, x5]
         ys = [y1, y2, y3, y4, y5]
 
+        flag = d >= (n_domains - (args.eval_split / 5))
+
         if output_type == 'classic':
             xs = reduce(lambda a,b:a+b, xs)
             ys = reduce(lambda a,b:a+b, ys)
             loaders = prep_loader(args, xs, ys)
 
-        elif output_type == 'continual-nested':
+        elif output_type == 'continual-nested' and (not flag):
             loaders = prep_continual_nested_loader(args, xs, ys)
 
         else:
             loaders = [prep_loader(args, xs[i], ys[i]) for i in range(5)]
 
-        if output_type == 'continual-nested' or output_type == 'classic':
+        if (output_type == 'continual-nested' and (not flag)) or output_type == 'classic':
             dataloaders.append(loaders)
         else: # output_type == 'continual'
             dataloaders += loaders

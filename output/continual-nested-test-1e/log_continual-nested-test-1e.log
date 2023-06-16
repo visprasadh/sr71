@@ -1,0 +1,86 @@
+2023-06-16 09:49:30,940 - INFO - Is GPU available? True
+2023-06-16 09:49:30,940 - INFO - Experiment continual-nested-test-1e setup:
+2023-06-16 09:49:30,940 - INFO - name: continual-nested-test-1e
+2023-06-16 09:49:30,940 - INFO - dataset: MNIST
+2023-06-16 09:49:30,940 - INFO - experiment: continual-nested
+2023-06-16 09:49:30,940 - INFO - n_domains: 15
+2023-06-16 09:49:30,941 - INFO - eval_split: 25
+2023-06-16 09:49:30,941 - INFO - step_size: 15
+2023-06-16 09:49:30,941 - INFO - train: 0
+2023-06-16 09:49:30,941 - INFO - noise_dim: 16
+2023-06-16 09:49:30,941 - INFO - num_rnn_layer: 1
+2023-06-16 09:49:30,941 - INFO - latent_dim: 32
+2023-06-16 09:49:30,941 - INFO - hidden_dim: 16
+2023-06-16 09:49:30,941 - INFO - noise_type: Gaussian
+2023-06-16 09:49:30,941 - INFO - num_workers: 0
+2023-06-16 09:49:30,941 - INFO - epoches: 1
+2023-06-16 09:49:30,941 - INFO - batch_size: 16
+2023-06-16 09:49:30,941 - INFO - learning_rate: 0.001
+2023-06-16 09:49:30,941 - INFO - is_test: True
+2023-06-16 09:49:30,941 - INFO - use MNIST data
+2023-06-16 09:49:30,941 - INFO - ----------------------------------------
+2023-06-16 09:49:48,603 - INFO - Start Training on Domain 0...
+2023-06-16 09:49:56,490 - INFO - Start Training on Domain 1...
+2023-06-16 09:50:03,440 - INFO - Start Training on Domain 2...
+2023-06-16 09:50:10,341 - INFO - Start Training on Domain 3...
+2023-06-16 09:50:17,143 - INFO - Start Training on Domain 4...
+2023-06-16 09:50:24,051 - INFO - Start Training on Domain 5...
+2023-06-16 09:50:30,703 - INFO - Start Training on Domain 6...
+2023-06-16 09:50:37,556 - INFO - Start Training on Domain 7...
+2023-06-16 09:50:44,553 - INFO - Start Training on Domain 8...
+2023-06-16 09:50:51,664 - INFO - Start Training on Domain 9...
+2023-06-16 09:50:58,741 - INFO - Testing task 0
+2023-06-16 09:50:59,365 - INFO - Average Testing Accuracy is 0.6864035089213149
+2023-06-16 09:50:59,366 - INFO - Testing task 1
+2023-06-16 09:51:00,152 - INFO - Average Testing Accuracy is 0.55224609375
+2023-06-16 09:51:00,153 - INFO - Testing task 2
+2023-06-16 09:51:00,968 - INFO - Average Testing Accuracy is 0.2367584745762712
+2023-06-16 09:51:00,968 - INFO - Testing task 3
+2023-06-16 09:51:01,666 - INFO - Average Testing Accuracy is 0.876
+2023-06-16 09:51:01,667 - INFO - Testing task 4
+2023-06-16 09:51:02,499 - INFO - Average Testing Accuracy is 0.929334677996174
+2023-06-16 09:51:02,499 - INFO - Testing task 0
+2023-06-16 09:51:03,144 - INFO - Average Testing Accuracy is 0.6925125314777059
+2023-06-16 09:51:03,145 - INFO - Testing task 1
+2023-06-16 09:51:03,903 - INFO - Average Testing Accuracy is 0.45458984375
+2023-06-16 09:51:03,904 - INFO - Testing task 2
+2023-06-16 09:51:04,510 - INFO - Average Testing Accuracy is 0.2547669491525424
+2023-06-16 09:51:04,510 - INFO - Testing task 3
+2023-06-16 09:51:05,091 - INFO - Average Testing Accuracy is 0.805
+2023-06-16 09:51:05,092 - INFO - Testing task 4
+2023-06-16 09:51:05,668 - INFO - Average Testing Accuracy is 0.8370967747703675
+2023-06-16 09:51:05,669 - INFO - Testing task 0
+2023-06-16 09:51:06,193 - INFO - Average Testing Accuracy is 0.5391604010771988
+2023-06-16 09:51:06,193 - INFO - Testing task 1
+2023-06-16 09:51:06,878 - INFO - Average Testing Accuracy is 0.37968750001164153
+2023-06-16 09:51:06,878 - INFO - Testing task 2
+2023-06-16 09:51:07,515 - INFO - Average Testing Accuracy is 0.2489406779661017
+2023-06-16 09:51:07,516 - INFO - Testing task 3
+2023-06-16 09:51:08,260 - INFO - Average Testing Accuracy is 0.6915
+2023-06-16 09:51:08,261 - INFO - Testing task 4
+2023-06-16 09:51:08,915 - INFO - Average Testing Accuracy is 0.7005040328348836
+2023-06-16 09:51:08,915 - INFO - Testing task 0
+2023-06-16 09:51:09,488 - INFO - Average Testing Accuracy is 0.583803258220056
+2023-06-16 09:51:09,489 - INFO - Testing task 1
+2023-06-16 09:51:10,228 - INFO - Average Testing Accuracy is 0.35634765634313226
+2023-06-16 09:51:10,229 - INFO - Testing task 2
+2023-06-16 09:51:10,829 - INFO - Average Testing Accuracy is 0.21133474576271186
+2023-06-16 09:51:10,830 - INFO - Testing task 3
+2023-06-16 09:51:11,447 - INFO - Average Testing Accuracy is 0.593
+2023-06-16 09:51:11,447 - INFO - Testing task 4
+2023-06-16 09:51:12,041 - INFO - Average Testing Accuracy is 0.5956653231574643
+2023-06-16 09:51:12,042 - INFO - Testing task 0
+2023-06-16 09:51:12,598 - INFO - Average Testing Accuracy is 0.6448934837839657
+2023-06-16 09:51:12,598 - INFO - Testing task 1
+2023-06-16 09:51:13,106 - INFO - Average Testing Accuracy is 0.38203125004656613
+2023-06-16 09:51:13,107 - INFO - Testing task 2
+2023-06-16 09:51:13,733 - INFO - Average Testing Accuracy is 0.2823093220338983
+2023-06-16 09:51:13,734 - INFO - Testing task 3
+2023-06-16 09:51:14,389 - INFO - Average Testing Accuracy is 0.498
+2023-06-16 09:51:14,389 - INFO - Testing task 4
+2023-06-16 09:51:14,974 - INFO - Average Testing Accuracy is 0.532963709965829
+2023-06-16 09:51:14,974 - INFO - Test accuracies for task 0 : [0.6864035089213149, 0.6925125314777059, 0.5391604010771988, 0.583803258220056, 0.6448934837839657]
+2023-06-16 09:51:15,288 - INFO - Test accuracies for task 1 : [0.55224609375, 0.45458984375, 0.37968750001164153, 0.35634765634313226, 0.38203125004656613]
+2023-06-16 09:51:15,439 - INFO - Test accuracies for task 2 : [0.2367584745762712, 0.2547669491525424, 0.2489406779661017, 0.21133474576271186, 0.2823093220338983]
+2023-06-16 09:51:15,601 - INFO - Test accuracies for task 3 : [0.876, 0.805, 0.6915, 0.593, 0.498]
+2023-06-16 09:51:15,750 - INFO - Test accuracies for task 4 : [0.929334677996174, 0.8370967747703675, 0.7005040328348836, 0.5956653231574643, 0.532963709965829]

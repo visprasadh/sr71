@@ -278,14 +278,14 @@ def main(args):
     print("Training time:", ending_time - starting_time)
 
     # Testing
-    if args.experiment == 'classic' or args.experiment == 'continual-nested':
+    if args.experiment == 'classic':
         test_accuracies = []
         for task_id, dataloader in enumerate(dataloaders[-int(args.eval_split) :]):
             log(f'Testing domain {task_id}')
             acc = evaluation(dataloader, rnn_unit, args, Es[-1], hiddens[-1])
             test_accuracies.append(acc)
         line_plot(args, test_accuracies, args.name)
-    elif args.experiment == 'continual':
+    elif args.experiment == 'continual' or args.experiment == 'continual-nested':
         test_accuracies = {'0': [], '1': [], '2': [], '3': [], '4': []}
         for task_id, dataloader in enumerate(dataloaders[-int(args.eval_split) :]):
             log(f'Testing task {task_id % 5}')
