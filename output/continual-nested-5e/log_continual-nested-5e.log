@@ -1,0 +1,23 @@
+2023-06-16 08:55:35,688 - INFO - Is GPU available? True
+2023-06-16 08:55:35,689 - INFO - Experiment continual-nested-5e setup:
+2023-06-16 08:55:35,689 - INFO - name: continual-nested-5e
+2023-06-16 08:55:35,689 - INFO - dataset: MNIST
+2023-06-16 08:55:35,689 - INFO - experiment: continual-nested
+2023-06-16 08:55:35,689 - INFO - n_domains: 15
+2023-06-16 08:55:35,689 - INFO - eval_split: 5
+2023-06-16 08:55:35,689 - INFO - step_size: 15
+2023-06-16 08:55:35,689 - INFO - train: 1
+2023-06-16 08:55:35,689 - INFO - noise_dim: 16
+2023-06-16 08:55:35,689 - INFO - num_rnn_layer: 1
+2023-06-16 08:55:35,689 - INFO - latent_dim: 32
+2023-06-16 08:55:35,689 - INFO - hidden_dim: 16
+2023-06-16 08:55:35,689 - INFO - noise_type: Gaussian
+2023-06-16 08:55:35,689 - INFO - num_workers: 0
+2023-06-16 08:55:35,689 - INFO - epoches: 5
+2023-06-16 08:55:35,689 - INFO - batch_size: 16
+2023-06-16 08:55:35,689 - INFO - learning_rate: 0.001
+2023-06-16 08:55:35,689 - INFO - is_test: True
+2023-06-16 08:55:35,689 - INFO - use MNIST data
+2023-06-16 08:55:35,689 - INFO - ----------------------------------------
+2023-06-16 08:56:28,417 - INFO - Start Training on Domain 0...
+2023-06-16 08:59:54,824 - INFO - Start Training on Domain 1...

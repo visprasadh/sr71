@@ -1,0 +1,41 @@
+2023-06-16 02:01:57,241 - INFO - Is GPU available? True
+2023-06-16 02:01:57,241 - INFO - Experiment classic-5e setup:
+2023-06-16 02:01:57,241 - INFO - name: classic-5e
+2023-06-16 02:01:57,241 - INFO - dataset: MNIST
+2023-06-16 02:01:57,241 - INFO - experiment: classic
+2023-06-16 02:01:57,241 - INFO - n_domains: 15
+2023-06-16 02:01:57,241 - INFO - eval_split: 5
+2023-06-16 02:01:57,241 - INFO - step_size: 15
+2023-06-16 02:01:57,241 - INFO - train: 1
+2023-06-16 02:01:57,241 - INFO - noise_dim: 16
+2023-06-16 02:01:57,241 - INFO - num_rnn_layer: 1
+2023-06-16 02:01:57,241 - INFO - latent_dim: 32
+2023-06-16 02:01:57,241 - INFO - hidden_dim: 16
+2023-06-16 02:01:57,242 - INFO - noise_type: Gaussian
+2023-06-16 02:01:57,242 - INFO - num_workers: 0
+2023-06-16 02:01:57,242 - INFO - epoches: 5
+2023-06-16 02:01:57,242 - INFO - batch_size: 16
+2023-06-16 02:01:57,242 - INFO - learning_rate: 0.001
+2023-06-16 02:01:57,242 - INFO - is_test: True
+2023-06-16 02:01:57,242 - INFO - use MNIST data
+2023-06-16 02:01:57,242 - INFO - ----------------------------------------
+2023-06-16 02:02:50,469 - INFO - Start Training on Domain 0...
+2023-06-16 02:06:01,257 - INFO - Start Training on Domain 1...
+2023-06-16 02:09:27,936 - INFO - Start Training on Domain 2...
+2023-06-16 02:12:54,052 - INFO - Start Training on Domain 3...
+2023-06-16 02:16:20,974 - INFO - Start Training on Domain 4...
+2023-06-16 02:19:46,167 - INFO - Start Training on Domain 5...
+2023-06-16 02:23:13,427 - INFO - Start Training on Domain 6...
+2023-06-16 02:26:38,302 - INFO - Start Training on Domain 7...
+2023-06-16 02:30:02,971 - INFO - Start Training on Domain 8...
+2023-06-16 02:33:28,374 - INFO - Start Training on Domain 9...
+2023-06-16 02:36:53,618 - INFO - Testing domain 0
+2023-06-16 02:36:57,601 - INFO - Average Testing Accuracy is 0.9622166666666667
+2023-06-16 02:36:57,601 - INFO - Testing domain 1
+2023-06-16 02:37:01,201 - INFO - Average Testing Accuracy is 0.88175
+2023-06-16 02:37:01,201 - INFO - Testing domain 2
+2023-06-16 02:37:04,746 - INFO - Average Testing Accuracy is 0.7826666666666666
+2023-06-16 02:37:04,746 - INFO - Testing domain 3
+2023-06-16 02:37:08,370 - INFO - Average Testing Accuracy is 0.6975666666666667
+2023-06-16 02:37:08,370 - INFO - Testing domain 4
+2023-06-16 02:37:11,972 - INFO - Average Testing Accuracy is 0.6321166666666667

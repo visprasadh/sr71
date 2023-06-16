@@ -4,7 +4,7 @@ import torch
 import numpy as np
 
 from torch.autograd import Variable
-from torch.utils.data import DataLoader, Dataset
+from torch.utils.data import DataLoader, Dataset, ConcatDataset
 from torchvision.datasets import MNIST
 
 from tqdm import tqdm
@@ -39,6 +39,20 @@ def prep_loader(args, x, y):
         ds,
         batch_size=args.batch_size,
         shuffle=True,
+        num_workers=args.num_workers,
+    )
+    return ldr
+
+def prep_continual_nested_loader(args, xs, ys):
+    datasets = []
+    for i in range(5):
+        ds = DomainDataset(xs[i], ys[i])
+        datasets.append(ds)
+    ds_merged = ConcatDataset(datasets)
+    ldr = DataLoader(
+        ds_merged,
+        batch_size=args.batch_size,
+        shuffle=False,
         num_workers=args.num_workers,
     )
     return ldr
@@ -98,10 +112,13 @@ def dataset_preparation(args, n_domains, step_size, output_type, train):
             ys = reduce(lambda a,b:a+b, ys)
             loaders = prep_loader(args, xs, ys)
 
+        elif output_type == 'continual-nested':
+            loaders = prep_continual_nested_loader(args, xs, ys)
+
         else:
             loaders = [prep_loader(args, xs[i], ys[i]) for i in range(5)]
 
-        if output_type == 'nested-continual' or output_type == 'classic':
+        if output_type == 'continual-nested' or output_type == 'classic':
             dataloaders.append(loaders)
         else: # output_type == 'continual'
             dataloaders += loaders
