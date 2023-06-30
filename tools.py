@@ -16,7 +16,7 @@ def line_plot(args, data, title):
     if args.experiment == 'classic':
         plt.xticks(range(args.eval_split))
     else:
-        plt.xticks(range(args.eval_split / 5))
+        plt.xticks(range(int(args.eval_split / 5)))
     plt.xlabel('Test domain')
     plt.ylabel('Accuracy')
     plt.savefig(f'output/{args.name}/{title}.jpg')

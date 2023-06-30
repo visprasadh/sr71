@@ -303,7 +303,10 @@ def main(args):
         test_accuracies = {'0': [], '1': [], '2': [], '3': [], '4': []}
         for task_id, dataloader in enumerate(dataloaders[-int(args.eval_split) :]):
             log(f'Testing task {task_id % 5}')
-            acc, preds = evaluation(dataloader, rnn_unit, args, Es[-5], hiddens[-5])
+            if args.experiment == 'continual':
+                acc, preds = evaluation(dataloader, rnn_unit, args, Es[-5], hiddens[-5])
+            else:
+                acc, preds = evaluation(dataloader, rnn_unit, args, Es[-1], hiddens[-1])
             test_accuracies[f'{task_id % 5}'].append(acc)
             # Training with the predicted data
             X_set = []
