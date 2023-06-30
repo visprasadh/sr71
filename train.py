@@ -303,8 +303,18 @@ def main(args):
         test_accuracies = {'0': [], '1': [], '2': [], '3': [], '4': []}
         for task_id, dataloader in enumerate(dataloaders[-int(args.eval_split) :]):
             log(f'Testing task {task_id % 5}')
-            acc = evaluation(dataloader, rnn_unit, args, Es[-1], hiddens[-1])
+            acc, preds = evaluation(dataloader, rnn_unit, args, Es[-5], hiddens[-5])
             test_accuracies[f'{task_id % 5}'].append(acc)
+            # Training with the predicted data
+            X_set = []
+            for batch, (X, y) in enumerate(dataloader):
+                X_set.append(X)
+            X_ds = torch.cat(X_set)
+            y_ds = torch.cat(preds)
+            new_dataloader = DataLoader(TensorDataset(X_ds, y_ds), batch_size = args.batch_size)
+            E, hidden, rnn_unit = train(new_dataloader, optimizer, rnn_unit, args, task_id, Es[-1], hiddens[-1])
+            Es.append(E)
+            hiddens.append(hidden)
         for key, value in test_accuracies.items():
             log(f'Test accuracies for task {key} : {value}')
             line_plot(args, value, f'{args.name} Task:{key}')
