@@ -1,0 +1,81 @@
+2023-06-30 05:59:08,963 - INFO - Is GPU available? True
+2023-06-30 05:59:08,963 - INFO - Experiment classic-test-one-revamp setup:
+2023-06-30 05:59:08,964 - INFO - name: classic-test-one-revamp
+2023-06-30 05:59:08,964 - INFO - dataset: MNIST
+2023-06-30 05:59:08,964 - INFO - experiment: classic
+2023-06-30 05:59:08,964 - INFO - n_domains: 10
+2023-06-30 05:59:08,964 - INFO - eval_split: 5
+2023-06-30 05:59:08,964 - INFO - step_size: 15
+2023-06-30 05:59:08,964 - INFO - train: 0
+2023-06-30 05:59:08,964 - INFO - noise_dim: 16
+2023-06-30 05:59:08,964 - INFO - num_rnn_layer: 1
+2023-06-30 05:59:08,964 - INFO - latent_dim: 32
+2023-06-30 05:59:08,964 - INFO - hidden_dim: 16
+2023-06-30 05:59:08,964 - INFO - noise_type: Gaussian
+2023-06-30 05:59:08,964 - INFO - num_workers: 0
+2023-06-30 05:59:08,964 - INFO - epoches: 10
+2023-06-30 05:59:08,964 - INFO - batch_size: 16
+2023-06-30 05:59:08,964 - INFO - learning_rate: 0.001
+2023-06-30 05:59:08,964 - INFO - is_test: True
+2023-06-30 05:59:08,964 - INFO - use MNIST data
+2023-06-30 05:59:08,964 - INFO - ----------------------------------------
+2023-06-30 05:59:16,865 - INFO - Start Training on Domain 0...
+2023-06-30 05:59:49,569 - INFO - Is GPU available? True
+2023-06-30 05:59:49,569 - INFO - Experiment classic-test-one-revamp setup:
+2023-06-30 05:59:49,569 - INFO - name: classic-test-one-revamp
+2023-06-30 05:59:49,569 - INFO - dataset: MNIST
+2023-06-30 05:59:49,569 - INFO - experiment: classic
+2023-06-30 05:59:49,569 - INFO - n_domains: 6
+2023-06-30 05:59:49,569 - INFO - eval_split: 5
+2023-06-30 05:59:49,569 - INFO - step_size: 15
+2023-06-30 05:59:49,569 - INFO - train: 0
+2023-06-30 05:59:49,569 - INFO - noise_dim: 16
+2023-06-30 05:59:49,569 - INFO - num_rnn_layer: 1
+2023-06-30 05:59:49,569 - INFO - latent_dim: 32
+2023-06-30 05:59:49,569 - INFO - hidden_dim: 16
+2023-06-30 05:59:49,570 - INFO - noise_type: Gaussian
+2023-06-30 05:59:49,570 - INFO - num_workers: 0
+2023-06-30 05:59:49,570 - INFO - epoches: 10
+2023-06-30 05:59:49,570 - INFO - batch_size: 16
+2023-06-30 05:59:49,570 - INFO - learning_rate: 0.001
+2023-06-30 05:59:49,570 - INFO - is_test: True
+2023-06-30 05:59:49,570 - INFO - use MNIST data
+2023-06-30 05:59:49,570 - INFO - ----------------------------------------
+2023-06-30 05:59:55,478 - INFO - Start Training on Domain 0...
+2023-06-30 06:00:22,235 - INFO - Is GPU available? True
+2023-06-30 06:00:22,236 - INFO - Experiment classic-test-one-revamp setup:
+2023-06-30 06:00:22,236 - INFO - name: classic-test-one-revamp
+2023-06-30 06:00:22,236 - INFO - dataset: MNIST
+2023-06-30 06:00:22,236 - INFO - experiment: classic
+2023-06-30 06:00:22,236 - INFO - n_domains: 6
+2023-06-30 06:00:22,236 - INFO - eval_split: 5
+2023-06-30 06:00:22,236 - INFO - step_size: 15
+2023-06-30 06:00:22,236 - INFO - train: 0
+2023-06-30 06:00:22,236 - INFO - noise_dim: 16
+2023-06-30 06:00:22,236 - INFO - num_rnn_layer: 1
+2023-06-30 06:00:22,236 - INFO - latent_dim: 32
+2023-06-30 06:00:22,236 - INFO - hidden_dim: 16
+2023-06-30 06:00:22,236 - INFO - noise_type: Gaussian
+2023-06-30 06:00:22,236 - INFO - num_workers: 0
+2023-06-30 06:00:22,236 - INFO - epoches: 3
+2023-06-30 06:00:22,236 - INFO - batch_size: 16
+2023-06-30 06:00:22,236 - INFO - learning_rate: 0.001
+2023-06-30 06:00:22,236 - INFO - is_test: True
+2023-06-30 06:00:22,236 - INFO - use MNIST data
+2023-06-30 06:00:22,236 - INFO - ----------------------------------------
+2023-06-30 06:00:28,115 - INFO - Start Training on Domain 0...
+2023-06-30 06:00:48,767 - INFO - Testing domain 0
+2023-06-30 06:00:49,747 - INFO - Average Testing Accuracy is 0.933
+2023-06-30 06:00:49,809 - INFO - Start Training on Domain 0...
+2023-06-30 06:01:10,518 - INFO - Testing domain 1
+2023-06-30 06:01:11,514 - INFO - Average Testing Accuracy is 0.491
+2023-06-30 06:01:11,565 - INFO - Start Training on Domain 1...
+2023-06-30 06:01:32,255 - INFO - Testing domain 2
+2023-06-30 06:01:33,235 - INFO - Average Testing Accuracy is 0.5097
+2023-06-30 06:01:33,286 - INFO - Start Training on Domain 2...
+2023-06-30 06:01:54,002 - INFO - Testing domain 3
+2023-06-30 06:01:54,987 - INFO - Average Testing Accuracy is 0.5058
+2023-06-30 06:01:55,038 - INFO - Start Training on Domain 3...
+2023-06-30 06:02:15,766 - INFO - Testing domain 4
+2023-06-30 06:02:16,747 - INFO - Average Testing Accuracy is 0.5074
+2023-06-30 06:02:16,785 - INFO - Start Training on Domain 4...

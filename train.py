@@ -5,6 +5,9 @@ import torch.nn.functional as F
 from torch.autograd import Variable
 import numpy as np
 
+from torch.utils.data import DataLoader
+from torch.utils.data import TensorDataset
+
 import os
 import logging
 import time
@@ -221,6 +224,7 @@ def evaluation(dataloader, rnn_unit, args, input_E, input_hidden):
     E = input_E
     hidden = input_hidden
     test_accs = []
+    preds = []
     with tqdm(dataloader, unit="batch") as tepoch:
         for X, Y in tepoch:
             X, Y = X.float().to(device), Y.float().to(device)
@@ -228,7 +232,7 @@ def evaluation(dataloader, rnn_unit, args, input_E, input_hidden):
             with torch.no_grad():
                 _, _, pred = rnn_unit(X, initial_noise, E, hidden)
                 loss = F.binary_cross_entropy(pred.squeeze(-1), Y)
-
+                preds.append(pred.squeeze(-1))
                 prediction = torch.as_tensor((pred.detach() - 0.5) > 0).float()
                 accuracy = (
                     prediction.squeeze(-1) == Y
@@ -236,7 +240,7 @@ def evaluation(dataloader, rnn_unit, args, input_E, input_hidden):
                 test_accs.append(accuracy.item())
                 tepoch.set_postfix(loss=loss.item(), accuracy=accuracy.item())
     log("Average Testing Accuracy is {}".format(np.mean(test_accs)))
-    return np.mean(test_accs)
+    return np.mean(test_accs), preds
 
 
 def main(args):
@@ -282,8 +286,18 @@ def main(args):
         test_accuracies = []
         for task_id, dataloader in enumerate(dataloaders[-int(args.eval_split) :]):
             log(f'Testing domain {task_id}')
-            acc = evaluation(dataloader, rnn_unit, args, Es[-1], hiddens[-1])
+            acc, preds = evaluation(dataloader, rnn_unit, args, Es[-1], hiddens[-1])
             test_accuracies.append(acc)
+            # Training with the predicted data
+            X_set = []
+            for batch, (X, y) in enumerate(dataloader):
+                X_set.append(X)
+            X_ds = torch.cat(X_set)
+            y_ds = torch.cat(preds)
+            new_dataloader = DataLoader(TensorDataset(X_ds, y_ds), batch_size = args.batch_size)
+            E, hidden, rnn_unit = train(new_dataloader, optimizer, rnn_unit, args, task_id, Es[-1], hiddens[-1])
+            Es.append(E)
+            hiddens.append(hidden)
         line_plot(args, test_accuracies, args.name)
     elif args.experiment == 'continual' or args.experiment == 'continual-nested':
         test_accuracies = {'0': [], '1': [], '2': [], '3': [], '4': []}
