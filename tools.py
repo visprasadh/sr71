@@ -9,13 +9,15 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 def line_plot(args, data, title):
-    sns.set_style('dark')
     plt.rcParams['figure.figsize'] = (10, 8)
     sns.lineplot(data = data)
     plt.grid()
-    sns.despine(offset=10, trim=True)
     plt.title(title)
-    plt.xlabel('Test task')
+    if args.experiment == 'classic':
+        plt.xticks(range(args.eval_split))
+        plt.xlabel('Test domain')
+    else:
+        plt.xlabel('Test task')
     plt.ylabel('Accuracy')
     plt.savefig(f'output/{args.name}/{title}.jpg')
     plt.show()

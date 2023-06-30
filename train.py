@@ -232,8 +232,8 @@ def evaluation(dataloader, rnn_unit, args, input_E, input_hidden):
             with torch.no_grad():
                 _, _, pred = rnn_unit(X, initial_noise, E, hidden)
                 loss = F.binary_cross_entropy(pred.squeeze(-1), Y)
-                preds.append(pred.squeeze(-1))
                 prediction = torch.as_tensor((pred.detach() - 0.5) > 0).float()
+                preds.append(prediction.squeeze(-1))
                 accuracy = (
                     prediction.squeeze(-1) == Y
                 ).float().sum() / prediction.shape[0]

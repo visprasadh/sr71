@@ -1,0 +1,105 @@
+2023-06-30 06:19:49,723 - INFO - Is GPU available? True
+2023-06-30 06:19:49,724 - INFO - Experiment classic-test-revamp-two setup:
+2023-06-30 06:19:49,724 - INFO - name: classic-test-revamp-two
+2023-06-30 06:19:49,724 - INFO - dataset: MNIST
+2023-06-30 06:19:49,724 - INFO - experiment: classic
+2023-06-30 06:19:49,724 - INFO - n_domains: 8
+2023-06-30 06:19:49,724 - INFO - eval_split: 3
+2023-06-30 06:19:49,724 - INFO - step_size: 15
+2023-06-30 06:19:49,724 - INFO - train: 0
+2023-06-30 06:19:49,724 - INFO - noise_dim: 16
+2023-06-30 06:19:49,724 - INFO - num_rnn_layer: 1
+2023-06-30 06:19:49,724 - INFO - latent_dim: 32
+2023-06-30 06:19:49,724 - INFO - hidden_dim: 16
+2023-06-30 06:19:49,724 - INFO - noise_type: Gaussian
+2023-06-30 06:19:49,724 - INFO - num_workers: 0
+2023-06-30 06:19:49,724 - INFO - epoches: 5
+2023-06-30 06:19:49,724 - INFO - batch_size: 16
+2023-06-30 06:19:49,724 - INFO - learning_rate: 0.001
+2023-06-30 06:19:49,724 - INFO - is_test: True
+2023-06-30 06:19:49,724 - INFO - use MNIST data
+2023-06-30 06:19:49,724 - INFO - ----------------------------------------
+2023-06-30 06:19:57,796 - INFO - Start Training on Domain 0...
+2023-06-30 06:20:08,740 - INFO - Start Training on Domain 1...
+2023-06-30 06:20:19,449 - INFO - Start Training on Domain 2...
+2023-06-30 06:20:30,042 - INFO - Start Training on Domain 3...
+2023-06-30 06:20:40,637 - INFO - Start Training on Domain 4...
+2023-06-30 06:20:51,207 - INFO - Testing domain 0
+2023-06-30 06:20:51,887 - INFO - Average Testing Accuracy is 0.9382
+2023-06-30 06:20:51,963 - INFO - Start Training on Domain 0...
+2023-06-30 06:21:02,805 - INFO - Testing domain 1
+2023-06-30 06:21:03,478 - INFO - Average Testing Accuracy is 0.5483
+2023-06-30 06:21:03,545 - INFO - Start Training on Domain 1...
+2023-06-30 06:21:14,390 - INFO - Testing domain 2
+2023-06-30 06:21:15,085 - INFO - Average Testing Accuracy is 0.532
+2023-06-30 06:21:15,152 - INFO - Start Training on Domain 2...
+2023-06-30 06:23:59,516 - INFO - Is GPU available? True
+2023-06-30 06:23:59,516 - INFO - Experiment classic-test-revamp-two setup:
+2023-06-30 06:23:59,516 - INFO - name: classic-test-revamp-two
+2023-06-30 06:23:59,516 - INFO - dataset: MNIST
+2023-06-30 06:23:59,516 - INFO - experiment: classic
+2023-06-30 06:23:59,516 - INFO - n_domains: 8
+2023-06-30 06:23:59,516 - INFO - eval_split: 3
+2023-06-30 06:23:59,516 - INFO - step_size: 15
+2023-06-30 06:23:59,516 - INFO - train: 0
+2023-06-30 06:23:59,516 - INFO - noise_dim: 16
+2023-06-30 06:23:59,516 - INFO - num_rnn_layer: 1
+2023-06-30 06:23:59,516 - INFO - latent_dim: 32
+2023-06-30 06:23:59,516 - INFO - hidden_dim: 16
+2023-06-30 06:23:59,516 - INFO - noise_type: Gaussian
+2023-06-30 06:23:59,516 - INFO - num_workers: 0
+2023-06-30 06:23:59,516 - INFO - epoches: 5
+2023-06-30 06:23:59,517 - INFO - batch_size: 16
+2023-06-30 06:23:59,517 - INFO - learning_rate: 0.001
+2023-06-30 06:23:59,517 - INFO - is_test: True
+2023-06-30 06:23:59,517 - INFO - use MNIST data
+2023-06-30 06:23:59,517 - INFO - ----------------------------------------
+2023-06-30 06:24:07,045 - INFO - Start Training on Domain 0...
+2023-06-30 06:24:18,612 - INFO - Start Training on Domain 1...
+2023-06-30 06:24:29,610 - INFO - Start Training on Domain 2...
+2023-06-30 06:24:40,553 - INFO - Start Training on Domain 3...
+2023-06-30 06:24:51,351 - INFO - Start Training on Domain 4...
+2023-06-30 06:25:02,080 - INFO - Testing domain 0
+2023-06-30 06:25:02,757 - INFO - Average Testing Accuracy is 0.8197
+2023-06-30 06:25:02,832 - INFO - Start Training on Domain 0...
+2023-06-30 06:25:13,630 - INFO - Testing domain 1
+2023-06-30 06:25:14,308 - INFO - Average Testing Accuracy is 0.7515
+2023-06-30 06:25:14,366 - INFO - Start Training on Domain 1...
+2023-06-30 06:25:25,292 - INFO - Testing domain 2
+2023-06-30 06:25:25,963 - INFO - Average Testing Accuracy is 0.6348
+2023-06-30 06:25:26,046 - INFO - Start Training on Domain 2...
+2023-06-30 06:30:12,571 - INFO - Is GPU available? True
+2023-06-30 06:30:12,572 - INFO - Experiment classic-test-revamp-two setup:
+2023-06-30 06:30:12,572 - INFO - name: classic-test-revamp-two
+2023-06-30 06:30:12,572 - INFO - dataset: MNIST
+2023-06-30 06:30:12,572 - INFO - experiment: classic
+2023-06-30 06:30:12,572 - INFO - n_domains: 8
+2023-06-30 06:30:12,572 - INFO - eval_split: 3
+2023-06-30 06:30:12,572 - INFO - step_size: 15
+2023-06-30 06:30:12,572 - INFO - train: 0
+2023-06-30 06:30:12,572 - INFO - noise_dim: 16
+2023-06-30 06:30:12,572 - INFO - num_rnn_layer: 1
+2023-06-30 06:30:12,572 - INFO - latent_dim: 32
+2023-06-30 06:30:12,572 - INFO - hidden_dim: 16
+2023-06-30 06:30:12,572 - INFO - noise_type: Gaussian
+2023-06-30 06:30:12,572 - INFO - num_workers: 0
+2023-06-30 06:30:12,572 - INFO - epoches: 5
+2023-06-30 06:30:12,572 - INFO - batch_size: 16
+2023-06-30 06:30:12,572 - INFO - learning_rate: 0.001
+2023-06-30 06:30:12,572 - INFO - is_test: True
+2023-06-30 06:30:12,572 - INFO - use MNIST data
+2023-06-30 06:30:12,572 - INFO - ----------------------------------------
+2023-06-30 06:30:20,038 - INFO - Start Training on Domain 0...
+2023-06-30 06:30:31,174 - INFO - Start Training on Domain 1...
+2023-06-30 06:30:42,497 - INFO - Start Training on Domain 2...
+2023-06-30 06:30:53,386 - INFO - Start Training on Domain 3...
+2023-06-30 06:31:04,094 - INFO - Start Training on Domain 4...
+2023-06-30 06:31:14,765 - INFO - Testing domain 0
+2023-06-30 06:31:15,426 - INFO - Average Testing Accuracy is 0.8695
+2023-06-30 06:31:15,500 - INFO - Start Training on Domain 0...
+2023-06-30 06:31:26,511 - INFO - Testing domain 1
+2023-06-30 06:31:27,210 - INFO - Average Testing Accuracy is 0.769
+2023-06-30 06:31:27,278 - INFO - Start Training on Domain 1...
+2023-06-30 06:31:38,645 - INFO - Testing domain 2
+2023-06-30 06:31:39,332 - INFO - Average Testing Accuracy is 0.6423
+2023-06-30 06:31:39,398 - INFO - Start Training on Domain 2...

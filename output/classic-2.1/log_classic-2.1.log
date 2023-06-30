@@ -1,0 +1,24 @@
+2023-06-30 06:38:11,666 - INFO - Is GPU available? True
+2023-06-30 06:38:11,666 - INFO - Experiment classic-2.1 setup:
+2023-06-30 06:38:11,667 - INFO - name: classic-2.1
+2023-06-30 06:38:11,667 - INFO - dataset: MNIST
+2023-06-30 06:38:11,667 - INFO - experiment: classic
+2023-06-30 06:38:11,667 - INFO - n_domains: 15
+2023-06-30 06:38:11,667 - INFO - eval_split: 5
+2023-06-30 06:38:11,667 - INFO - step_size: 15
+2023-06-30 06:38:11,667 - INFO - train: 1
+2023-06-30 06:38:11,667 - INFO - noise_dim: 16
+2023-06-30 06:38:11,667 - INFO - num_rnn_layer: 1
+2023-06-30 06:38:11,667 - INFO - latent_dim: 32
+2023-06-30 06:38:11,667 - INFO - hidden_dim: 16
+2023-06-30 06:38:11,667 - INFO - noise_type: Gaussian
+2023-06-30 06:38:11,667 - INFO - num_workers: 0
+2023-06-30 06:38:11,667 - INFO - epoches: 5
+2023-06-30 06:38:11,667 - INFO - batch_size: 16
+2023-06-30 06:38:11,667 - INFO - learning_rate: 0.001
+2023-06-30 06:38:11,667 - INFO - is_test: True
+2023-06-30 06:38:11,667 - INFO - use MNIST data
+2023-06-30 06:38:11,667 - INFO - ----------------------------------------
+2023-06-30 06:39:08,829 - INFO - Start Training on Domain 0...
+2023-06-30 06:40:17,614 - INFO - Start Training on Domain 1...
+2023-06-30 06:41:22,658 - INFO - Start Training on Domain 2...

@@ -38,7 +38,7 @@ def prep_loader(args, x, y):
     ldr = DataLoader(
         ds,
         batch_size=args.batch_size,
-        shuffle=True,
+        shuffle=False,
         num_workers=args.num_workers,
     )
     return ldr
