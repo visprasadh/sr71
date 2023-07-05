@@ -297,7 +297,7 @@ def main(args):
             new_dataloader = DataLoader(TensorDataset(X_ds, y_ds), batch_size = args.batch_size)
             E, hidden, rnn_unit = train(dataloader, optimizer, rnn_unit, args, task_id, Es[-1], hiddens[-1])
             Es.append(E)
-            hiddens.append(hidden)
+            # hiddens.append(hidden)
         line_plot(args, test_accuracies, args.name)
     elif args.experiment == 'continual' or args.experiment == 'continual-nested':
         test_accuracies = {'0': [], '1': [], '2': [], '3': [], '4': []}
@@ -317,7 +317,7 @@ def main(args):
             new_dataloader = DataLoader(TensorDataset(X_ds, y_ds), batch_size = args.batch_size)
             E, hidden, rnn_unit = train(new_dataloader, optimizer, rnn_unit, args, task_id, Es[-1], hiddens[-1])
             Es.append(E)
-            hiddens.append(hidden)
+            # hiddens.append(hidden)
         for key, value in test_accuracies.items():
             log(f'Test accuracies for task {key} : {value}')
             line_plot(args, value, f'{args.name} Task:{key}')
