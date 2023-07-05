@@ -295,7 +295,7 @@ def main(args):
             X_ds = torch.cat(X_set)
             y_ds = torch.cat(preds)
             new_dataloader = DataLoader(TensorDataset(X_ds, y_ds), batch_size = args.batch_size)
-            E, hidden, rnn_unit = train(new_dataloader, optimizer, rnn_unit, args, task_id, Es[-1], hiddens[-1])
+            E, hidden, rnn_unit = train(dataloader, optimizer, rnn_unit, args, task_id, Es[-1], hiddens[-1])
             Es.append(E)
             hiddens.append(hidden)
         line_plot(args, test_accuracies, args.name)
