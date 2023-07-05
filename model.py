@@ -26,15 +26,15 @@ class RNN(nn.Module):
             ),
         )
         # Transforming vector to LSTM input shape
-        self.lin_transform_up = nn.Sequential(
-            nn.Linear(
-                data_size * 128 + 128 * 128 + 128 + 128 + 128 + 1, args.hidden_dim
-            ),
-            nn.ReLU(),
-            nn.Linear(args.hidden_dim, args.hidden_dim),
-            nn.ReLU(),
-            nn.Linear(args.hidden_dim, args.latent_dim),
-        )
+        # self.lin_transform_up = nn.Sequential(
+        #     nn.Linear(
+        #         data_size * 128 + 128 * 128 + 128 + 128 + 128 + 1, args.hidden_dim
+        #     ),
+        #     nn.ReLU(),
+        #     nn.Linear(args.hidden_dim, args.hidden_dim),
+        #     nn.ReLU(),
+        #     nn.Linear(args.hidden_dim, args.latent_dim),
+        # )
 
         self.num_rnn_layer = args.num_rnn_layer
         self.data_size = data_size
@@ -78,7 +78,8 @@ class RNN(nn.Module):
             # Initialize an input for the LSTM
             inputs = torch.tanh(self.init_input(z))
         else:
-            inputs = self.lin_transform_up(E)
+            # inputs = self.lin_transform_up(E)
+            inputs = E
 
         out, hidden = self.rnn(inputs.unsqueeze(0), hidden)
 
@@ -94,4 +95,4 @@ class RNN(nn.Module):
             else:
                 pred = torch.sigmoid(torch.add(torch.mm(pred, m), bias_list[i]))
         
-        return E, hidden, pred
+        return inputs, hidden, pred
