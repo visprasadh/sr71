@@ -89,14 +89,14 @@ def dataset_preparation(args, n_domains, step_size, output_type, train):
         y = data_y
         for i, x in enumerate(domain_x):
             if y[i] == 0 or y[i] == 1:
-                x3.append(x)
-                y3.append(y[i] % 2)
+                x1.append(x)
+                y1.append(y[i] % 2)
             elif y[i] == 2 or y[i] == 3:
                 x2.append(x)
                 y2.append(y[i] % 2)
             elif y[i] == 4 or y[i] == 5:
-                x1.append(x)
-                y1.append(y[i] % 2)
+                x3.append(x)
+                y3.append(y[i] % 2)
             elif y[i] == 6 or y[i] == 7:
                 x4.append(x)
                 y4.append(y[i] % 2)
