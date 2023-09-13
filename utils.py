@@ -10,6 +10,8 @@ from torchvision.datasets import MNIST
 from tqdm import tqdm
 from tools import rotate_digits
 from functools import reduce
+from adapter import Adapter
+from classifier import Classifier
 
 
 def make_noise(shape, type="Gaussian"):
@@ -67,7 +69,7 @@ def dataset_preparation(args, n_domains, step_size, output_type, train):
     # nested-continual: Outputs a nested list of dataloaders. List contains lists pertaining to each domain. Nested lists comprises of dataloaders of each task
 
     dataset = MNIST(
-        root="data",
+        root="data",    
         train=bool(train),
         download=False,
     )
